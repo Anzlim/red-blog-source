@@ -20,6 +20,7 @@ jobs:
         extended: true
 
     - name: Build
+      run: hugo -D
       run: hugo --minify
 
     - name: Deploy
