@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://redthemers.tk/posts/my-first-post/</loc>
-    <lastmod>2021-10-24T11:43:25+05:30</lastmod>
+    <loc>https://redthemers.tk/</loc>
+    <lastmod>2021-10-31T13:25:32+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://redthemers.tk/</loc>
-    <lastmod>2021-10-24T11:43:25+05:30</lastmod>
+    <loc>https://redthemers.tk/posts/my-second-post/</loc>
+    <lastmod>2021-10-31T13:25:32+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://redthemers.tk/posts/</loc>
+    <lastmod>2021-10-31T13:25:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://redthemers.tk/posts/my-first-post/</loc>
     <lastmod>2021-10-24T11:43:25+05:30</lastmod>
   </url>
   
