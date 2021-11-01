@@ -1,0 +1,20 @@
+{
+  "name": "red-dairy",
+  "version": "1.0.0",
+  "description": "Code Blog deployment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "hugo -D && hugo --minify && echo 'www.redthemers.tk' > ./public/CNAME "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anzlim/red-cloud-source.git"
+  },
+  "author": "red",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anzlim/red-cloud-source/issues"
+  },
+  "homepage": "https://github.com/Anzlim/red-cloud-source#readme"
+}
