@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "hugo -D && hugo --minify && echo 'www.redthemers.tk' > ./public/CNAME "
+    "build": "hugo -D && hugo --minify && echo 'www.redmama.me' > ./public/CNAME "
   },
   "repository": {
     "type": "git",

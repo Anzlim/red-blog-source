@@ -1,4 +1,5 @@
-baseURL = "https://redthemers.tk/"
+baseURL = "https://redmama.me/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Red"
 theme = "PaperMod"
+paginate = 5
