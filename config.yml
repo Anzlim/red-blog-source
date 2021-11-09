@@ -1,0 +1,63 @@
+baseURL: 'https://redmama.me/'
+languageCode: en-us
+title: Red's Blog
+theme: PaperMod
+paginate: 5
+
+googleAnalytics: G-G3VREG7VVC
+
+params:
+ env: production
+ description: Blog on cloud services like AppSync,aws lambda, aws IAM, SAM.
+ author: Red
+ ShowShareButtons: true
+ ShowPostNavLinks: true
+ ShowBreadCrumbs: true
+ ShowCodeCopyButtons: false
+ homeInfoParams:
+        Title: "Red's Blog"
+        Content: >
+            Welcome to Red's Blog.
+            - You will find Articles related Cloud Computing. How-to Blogs on various services from Cloud Provider like AWS & Azure
+            
+            - Mainly aws services like AppSync, Lambda, s3, IAM, SAM.
+
+
+
+#### Menu ####
+menu:
+    main:
+        - identifier: tags
+          name: tags
+          url: /tags/
+          weight: 20
+
+taxonomies:
+    category: categories
+    tag: tags
+    series: series
+
+###### Social Media #####
+privacy:
+    vimeo:
+        disabled: false
+        simple: true
+
+    twitter:
+        disabled: false
+        enableDNT: true
+        simple: true
+
+    instagram:
+        disabled: false
+        simple: true
+
+    youtube:
+        disabled: false
+        privacyEnhanced: true
+
+services:
+    instagram:
+        disableInlineCSS: true
+    twitter:
+        disableInlineCSS: true
