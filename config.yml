@@ -4,11 +4,8 @@ title: Red's Blog
 theme: PaperMod
 paginate: 5
 
-#googleAnalytics: G-G3VREG7VVC
+googleAnalytics: UA-212461977
 
-analytics:
-    google:
-        SiteVerificationTag:  "G-G3VREG7VVC"
 
 
 params:
