@@ -8,35 +8,34 @@ tags: ["aws","AppSync"]
 
 ## Preface
 
-This guide is written for people who want to get started with appsync. Don’t want to get into details of documentation of this service. And wanted to have a look around appsync without actually understanding it totally.
+This guide is written for people who want to get started with appsync. Don’t want to get into details of documentation of this service. And wanted to have a look around appsync without actually understanding it completely.
 
 This Guide has no intention of making the reader capable of working on this service asap.
 
-But to Help get understand the Applications of this service. Familiar with working on it. And Exploring various possible ways of using the AppSync Service.
+But to Help get understand the Applications of this service. Getting Familiar with the service. And Exploring various possible ways of using the AppSync Service.
 
 
 ## Getting the fundamentals clear
 
-Appsync is one the best services provided by AWS for building small to medium size backend. It covers almost all the parts to build an end to end backend.
+Appsync is one of the best services provided by AWS for building small to medium size backend. It covers almost all the parts to build an end to end backend.
 
-So what really is **Appsync**? We can have more than one definition based on our requirements. If we wanted to use it for filling the need of api then it's a perfect alternative to API gateway. Or if we wanted some logic, then it provides computation in the place called resolvers, more details on resolvers later.
+So what really is **Appsync**? We can have more than one definition based on our requirements. If we wanted to use it for filling the need of an api then it’s a perfect alternative to API gateway. Or if we wanted some logic, then it provides computation using resolvers, more details on resolvers later.
 
 Or if you wanted to use **Graph QL** api then this is the best managed graph QL engine.
 
-For me I had chosen appsync for realtime architecture needs.   
-Yes it supports real time with basic filtering.
-You can connect to other services of AWS as well as any service in the world using http resolver.
+For me I had chosen appsync for realtime architecture needs.
+Yes it supports real time data transfer with basic filtering. You can connect to other services of AWS as well as any service in the world using http resolver.
 
 In a nutshell appsync is a managed graph QL engine with many features like authentication, realtime data (wss - websocket) support & a little bit of computation built-in using VTL (Velocity template language) language in resolver.
 
 
 ### Who should Consider Appsync
 
-- If you want to build a real time application like a chat application.
+- If you want to build a real time application for example a chat application.
 - If you are good at graph QL & wanted to use Graph QL api in your project
 - If your project is not too complex or big
 - If you wanted to use AWS service only
-- If you wanted to build something really fast
+- If you wanted to build something is less time
 
 ### Who should not care about appsync
 
@@ -45,15 +44,12 @@ In a nutshell appsync is a managed graph QL engine with many features like authe
 - If rest api fulfills your requirements
   
   
-  
-**Let's start piece by piece of this service to get an in-depth knowledge on how to use it effectively in an application.**
-
 ## Graph QL
 
 Before understanding graph ql let's take a look at how clients used to communicate with the server earlier.
 For a client to communicate with the server an API is required, the most popular is the rest api. Which is widely used in big projects. Before rest there was **COBRA** & **Soap**. 
 
-We don't need to understand there working nor there history but if you wanted to have a read on this do check the Article on the history of api - before **rest api**
+We don't need to understand there working nor there history but if you wanted to have a read on this do check the Article - [History of rest api](https://blog.readme.com/the-history-of-rest-apis/)
 
 **Graph QL** was publicly released in 2015. It is the newest API to work with. 
 
@@ -72,21 +68,21 @@ So if a rest api is implemented then you need to call two times one for getting 
 The rest api is simple. Performs just one task. Though this may come at an extra api call.
 
 On the other hand in Graph QL you could do just one call to get both the data, that is the user & it's hobbies.
-In Graph QL you get what you want no under-fetching or over-fetching
+In Graph QL you get what you want there is no under-fetching or over-fetching
 
 **under-fetching** - when you do an API call but the data you got is not enough for your need then it's under-fetching.\
 **over-fetching** - when you do an API call and you get more data than is required then it's over fetching.
 
 
 To get these advantages it all depends on how you make your Schema design.
-Don't worry if not understood. It takes a good amount of time to learn to make a good schema.
+Don't worry if you have not understood. It takes a good amount of time to learn to make a good schema.
 
 **Well what is a schema?**
 
 It's one of the most important parts of graph QL. It defines the data type of the object. The shape of the object that could be passed. Also it lets us define mutation query & subscriptions.
 
-**Mutations** - It can be considered as an alternative to put, post & delete request of rest api. Basically this is used to Manipulate The  data on the server.\
-**Query** - this is an alternative to get requests of rest api. If you want to get a particular data from a server use a Query request.\
+**Mutations** - It can be considered as an alternative to **put**, **post** & **delete** request of rest api. Basically this is used to Manipulate The  data on the server.\
+**Query** - this is an alternative to **get** requests of rest api. If you want to get a particular data from a server use a Query request.\
 **Subscriptions** - This is an awesome feature which lets you do some real time stuff. Example if you wanted to build a chat system with getting new messages in real time.
 
 Let's understand the Syntax of the schema\
@@ -147,7 +143,7 @@ Say we want to store data in DynamoDB we can use DynamoDB as our data source and
 ### Schema
 
 We create Schema to shape as well as define operations.\
-An addUser mutation can be used to add a user or getUser to get a user. A Type User which defines that it contains attributes like Id, name, age with type String, String & Int respectively.
+An addUser mutation can be used to add a user or getUser to get a user. A **Type** User which defines that it contains attributes like Id, name, age with type String, String & Int respectively.
 
 ### Resolver
 
@@ -173,7 +169,7 @@ These are the main parts. Let's look at them one at a time and how they are conn
 Resolver is one of the most important part in Appsync.\
 and even more important if you are thinking of adding most of the business logic in the resolver. Let's get Started.
 
-First we need to create a data Source. We will create a DynamoDB data source. We need to use VTL ( Velocity template language ) to add our business logic.
+First we need to create a data Source. We will create a DynamoDB data source. We need to use VTL ( Velocity template language ) in which we add our business logic.
 
 **What is VTL ?**\
 Apache Velocity Template Language (VTL) is a Java-based template engine.\
@@ -182,7 +178,7 @@ VTL is a logical template language that gives you the power to manipulate both t
 It is very similar to any other language.
 It has variables, conditional statements, loops and many data types supported.
 
-I will guide with basic stuff only. But for getting a deeper understanding please refer to the AWS guide (VTL).
+I will guide with basic stuff only. But for getting a deeper understanding please refer to the AWS guide.
 
 
 #### Variables 
@@ -220,8 +216,8 @@ VTL is good for achieving easy - medium business logic not at all recommended fo
 
 ### Concept
 
-Here we go, A resolver connects the schema with the Back-end. Where you write your business logic if you want to.
-Here we write are CRUD operations.\
+Here we go, A resolver connects the schema with the Back-end.
+We can write CRUD operations in resolver.\
 Suppose I want to write add user Operation in DynamoDB
 The request mapping template is
 ```velocity
@@ -239,15 +235,15 @@ The request mapping template is
 If you don't know DynamoDB - It's a superfast Nosql database from AWS. Where you create a table and store objects in it.\
 It has concept of primary key & sort key
 Both these are attributes.\
-Like to store user data the table would like
+Like to store user data the table would be like
 - ***email - Primary key attribute***
 - ***name - Sort key attribute***
 - ***age - regular attribute***
 - ***address - regular attribute***
 
 
-The condition is that in every item should have a unique combination of primary key & Sort key in a particular table.\
-In this case no two items can have same email as well as name ((This is just an example as
+The condition is that in every item it should have a unique combination of primary key & Sort key in a particular table.\
+In this case no two items can have same email as well as name (This is just an example as
 email will always be unique anyway)
 
 An item should compulsorily have a primary key and can have any other attributes. (Upto 100 attributes)
@@ -255,7 +251,8 @@ Now if you check resolver above
 It has some fields
 
 **version** - The version for template definition\
-**Operation** - the DynamoDB operations (In our case a Putiem to add new item) Key - which allow us to add the the primary & sort key value\
+**Operation** - the DynamoDB operations (In our case a PutItem to add new item) 
+**Key** - which allow us to add the the primary & sort key value\
 **attributeValues** : These are the extra attributes which could be added
 
 Now the Response mapping template could be
@@ -265,7 +262,7 @@ $utils.toJson($context.result)
 Just passing the result back to the client as is.
 
 If you didn't understand the technicality, no worry because it was not meant to be.\
-All you should get by now is how Appsync works and it's pieces. The Resolver is a very important & very big part and we will dive deeper in other guides.
+All you should get by now is how Appsync works in basic terms. The Resolver is a very important & very big part and we will dive deeper in some other guides.
 
 ## Basic Authentication
 
@@ -274,7 +271,7 @@ Mainly IAM, AWS Cognito, API_KEY and others.
 
 ### API_KEY 
 
-The console allows us to create a temp api key which can have a validity of upto a year.\
+The aws console allows us to create a temp api key which can have a validity of upto a year.\
 So this could be where you use your graph QL api as a third party api elsewhere. It's not recommended for regular projects though. Can be used for testing purpose
 
 ### IAM
